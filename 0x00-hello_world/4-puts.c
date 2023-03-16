@@ -1,10 +1,14 @@
 #include <stdio.h>
+
+/**
+ * main-using put
+ * Return: this returns 0
+ */
+
 int main(void)
 {
-	/**
-	 * main-using put
-	 *
-	 * /
-	 * */
 	puts("\"Programming is like building a multilingual puzzle");
-	return(0);
+
+	return (0);
+
+}
