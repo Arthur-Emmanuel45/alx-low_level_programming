@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main-positive and negative random values
+ * main-positive and negativer random number generator
  * Return:This will return 0
  */
 int main(void)
@@ -16,8 +16,8 @@ int main(void)
 		printf("is positive");
 	} else if (n == 0)
 	{
-		printf("is zero");
+		printf(" is zero");
 	} else
 		printf("is negative");
-
 	return (0);
+}
