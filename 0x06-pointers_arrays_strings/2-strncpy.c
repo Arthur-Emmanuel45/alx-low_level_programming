@@ -1,14 +1,14 @@
 #include "main.h"
 /**
- *strncpy-copies a sting
+ *_strncpy-copies a sting
  *@dest:frist string to copy
  *@src:second string to copy
  *@n:number of byte to copy from src
  *Return:a pointer to the copied strings
  */
-char *strncpy(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
-		int index = 0, src_len = 0;
+	int index = 0, src_len = 0;
 
 	while (src[index++])
 		src_len++;
