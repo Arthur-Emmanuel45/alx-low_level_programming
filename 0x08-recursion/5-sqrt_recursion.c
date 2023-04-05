@@ -13,11 +13,11 @@ int _sqrt(int num, int root)
 {
 	int i = root * root;
 
-	if (i >  num)
+	if (root == num / 2)
 	{
 		return (-1);
 	}
-	else if (root == num)
+	else if (i == num)
 	{
 		return (root);
 	}
