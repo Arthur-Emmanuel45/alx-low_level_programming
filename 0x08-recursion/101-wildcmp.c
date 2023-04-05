@@ -42,11 +42,11 @@ void iterate_wildcard(char **s)
  */
 char *postfix_match(char *str, char *postfix)
 {
-	int str_len = strlen_no_wilds(str) - 1;
-	int postfix_len = strlen_no_wilds(postfix) - 1;
+	int str_len = strlen_no_wildcard(str) - 1;
+	int postfix_len = strlen_no_wildcard(postfix) - 1;
 
 	if (*postfix == '*')
-		iterate_wild(&postfix);
+		iterate_wildcard(&postfix);
 
 	if (*(str + str_len - postfix_len) == *postfix && *postfix != '\0')
 	{
