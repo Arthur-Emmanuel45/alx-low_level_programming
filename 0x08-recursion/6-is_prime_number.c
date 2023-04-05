@@ -25,7 +25,7 @@ int divisible(int num, int div)
  */
 int is_prime_number(int n)
 {
-	int div = 1;
+	int div = 2;
 
 	return (divisible(n, div));
 }
