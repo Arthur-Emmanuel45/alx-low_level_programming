@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * str_no_wildcard-return the lenght of a string and no wildcard
+ * strlen_no_wildcard-return the lenght of a string and no wildcard
  * @s:the string to check
  * Return:the length of a string
  */
