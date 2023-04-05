@@ -11,3 +11,7 @@ int divisible(int num, int div);
 int is_palindrome(char *s);
 int stringlen(char *s);
 int find_palindrome(char *s, int length, int index);
+int strlen_no_wildcard(char *s);
+void iterate_wildcard(char **s);
+char *postfix_match(char *s, char *ppostfix);
+int wildcmp(char *s1, char *s2);
