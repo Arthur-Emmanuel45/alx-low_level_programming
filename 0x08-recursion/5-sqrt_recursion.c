@@ -4,7 +4,7 @@ int _sqrt(int num, int root);
 int _sqrt_recursion(int n);
 
 /**
- * sqrt-return the natural square root
+ * _sqrt-return the natural square root
  * @num:the number to square root
  * @root:the square root
  * Return:the natural square root
