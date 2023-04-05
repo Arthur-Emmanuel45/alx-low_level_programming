@@ -36,28 +36,25 @@ void iterate_wildcard(char **s)
 
 /**
  * postfix_match-check the postfix of a string if it matches another
- * @s:the string to check
+ * @str:the string to check
  * @postfix:the postfix to check
  * Return:a pointer
  */
-char *postfix_match(char *s, char *postfix)
+char *postfix_match(char *str, char *postfix)
 {
-	int str_length = strlen_no_wildcard(s) - 1;
-	int postfix_len = strlen_no_wildcard(postfix) - 1;
+	int str_len = strlen_no_wilds(str) - 1;
+	int postfix_len = strlen_no_wilds(postfix) - 1;
 
 	if (*postfix == '*')
-	{
-		iterate_wildcard(&postfix);
-	}
-	else if (*(s + str_length - postfix_len) == *postfix && *postfix != '\0')
+		iterate_wild(&postfix);
+
+	if (*(str + str_len - postfix_len) == *postfix && *postfix != '\0')
 	{
 		postfix++;
-		return (postfix_match(s, postfix));
+		return (postfix_match(str, postfix));
 	}
-	else
-	{
+
 	return (postfix);
-	}
 }
 
 /**
