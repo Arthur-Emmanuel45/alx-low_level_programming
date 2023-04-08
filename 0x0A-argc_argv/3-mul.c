@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		mult = atoi(argv[1]) + atoi(argv[2]);
+		mult = atoi(argv[1]) * atoi(argv[2]);
 		printf("%d\n", mult);
 	}
 
