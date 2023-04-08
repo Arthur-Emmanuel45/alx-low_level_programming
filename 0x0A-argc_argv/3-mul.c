@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		for (int i = 1; i < argc; i++)
+		for (i = 1; i < argc; i++)
 		{
 			mult = mult * atoi(argv[i]);
 		}
