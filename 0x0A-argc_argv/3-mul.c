@@ -5,13 +5,11 @@
  * main -print multiplies two numbers
  * @argc:count number of argument
  * @argv:string of the argument
- * @Return:1 if the argument is lesss then three otherwide 0;
+ * Return:1 if the argument is lesss then three otherwide 0;
  */
 int main(int argc, char *argv[])
 {
-	int mult;
-
-	int i;
+	int mult, n1, n2;
 
 	if (argc <= 3)
 	{
@@ -21,11 +19,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		for (i = 1; i < argc; i++)
-		{
-			mult = mult * atoi(argv[i]);
-		}
-
+		mult = atoi(argv[1]) + atoi(argv[2]);
 		printf("%d\n", mult);
 	}
 
