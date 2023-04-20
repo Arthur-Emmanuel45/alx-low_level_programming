@@ -9,39 +9,33 @@
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	int bytes, i;
-	int (*address)(int, char **) = main;
-	unsigned char opcode;
+	int num1, num2;
+	char *op;
 
-	if (argc != 2)
+	if (argc != 4)
 	{
 		printf("Error\n");
-		exit(1);
+		exit(98);
 	}
 
-	bytes = atoi(argv[1]);
+	num1 = atoi(argv[1]);
+	op = argv[2];
+	num2 = atoi(argv[3]);
 
-	if (bytes < 0)
+	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
-		exit(2);
+		exit(99);
 	}
 
-	for (i = 0; i < bytes; i++)
+	if ((*op == '/' && num2 == 0) ||
+	    (*op == '%' && num2 == 0))
 	{
-		opcode = *(unsigned char *)address;
-		printf("%.2x", opcode);
-
-		if (i == bytes - 1)
-		{
-			continue;
-		}
-		printf(" ");
-
-		address++;
+		printf("Error\n");
+		exit(100);
 	}
 
-	printf("\n");
+	printf("%d\n", get_op_func(op)(num1, num2));
 
 	return (0);
 }
