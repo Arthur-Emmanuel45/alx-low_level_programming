@@ -2,23 +2,23 @@
 #include <stdio.h>
 /**
  * print_list - function that Prints all the elements of a list_t list.
- * @c:the elements to check
+ * @h:the elements to check
  * Return: The number of nodes
  */
-size_t print_list(const list_t *c)
+size_t print_list(const list_t *h)
 {
 	size_t nodes = 0;
 
-	while (c)
+	while (h)
 	{
-		if (c->str == NULL)
+		if (h->str == NULL)
 			printf("[0] (nil)\n");
 
 		else
-			printf("[%d] %s\n", c->len, c->str);
+			printf("[%d] %s\n", h->len, h->str);
 
 		nodes++;
-		c = c->next;
+		h = h->next;
 	}
 
 	return (nodes);
