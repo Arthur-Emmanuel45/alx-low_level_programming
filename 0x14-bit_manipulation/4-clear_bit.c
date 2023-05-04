@@ -1,6 +1,6 @@
-#include "main"
+#include "main.h"
 /**
- * set_bit -  function that sets the value of a bit to 1 at a given index.
+ * clear_bit -  function that sets the value of a bit to 1 at a given index.
  * @n : a ponter to the number to change
  * @index : int index of the num to change
  * Return:1 or -1
