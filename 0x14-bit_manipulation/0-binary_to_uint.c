@@ -10,7 +10,7 @@ unsigned int binary_to_unit(const char *b)
 	int length;
 	unsigned int num = 0, multiply = 1;
 
-	if (b == NULL)
+	if (b == '0')
 	{
 		return (0);
 	}
