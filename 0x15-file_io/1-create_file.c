@@ -8,21 +8,20 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	ssize_t pd, w;
-	int lenght;
-
-	pd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	ssize_t  pd, w;
+	int len = 0;
 
 	if (filename == NULL)
 		return (-1);
 
 	if (text_content != NULL)
 	{
-		for (lenght = 0; text_content[lenght];)
-			lenght++;
+		for (len = 0; text_content[len];)
+			len++;
 	}
 
-	w = write(pd, text_content, lenght);
+	pd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	w = write(pd, text_content, len);
 
 	if (pd == -1 || w == -1)
 		return (-1);
