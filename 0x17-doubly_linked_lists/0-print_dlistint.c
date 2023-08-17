@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 /**
  * print_dlistint -  the node struct
  * @h: a pointer to the head of the node
